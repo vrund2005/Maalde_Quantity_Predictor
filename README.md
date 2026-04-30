@@ -141,7 +141,7 @@ demand-prediction-engine/
 ```
 ### 4. Run the code
 ```
-run each cell of .ipynb
+run each cell of Qty_prediction.ipynb
 ```
 
 ### 5. Launch the UI
