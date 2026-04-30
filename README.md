@@ -100,7 +100,7 @@ log prediction → expm1 → Predicted QTY
 ## 🗂️ Project Structure
 
 ```
-demand-prediction-engine/
+Maalde_Quantity_Predictor/
 ├── app.py                  # Streamlit UI
 ├── Qty_prediction.ipynb         # OCR extraction + CSV matching + Embedding extraction + model training
 ├── model_config.json       # Model metadata
@@ -120,8 +120,8 @@ demand-prediction-engine/
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/vrund2005/demand-prediction-engine.git
-cd demand-prediction-engine
+git clone https://github.com/vrund2005/Maalde_Quantity_Predictor.git
+cd Maalde_Quantity_Predictor
 ```
 
 ### 2. Install dependencies
@@ -132,7 +132,7 @@ pip install -r requirements.txt
 ### 3. Add your data
 Place the following in the project root:
 ```
-demand-prediction-engine/
+Maalde_Quantity_Predictor/
 ├── 1/          ← image folder 1
 ├── 2/          ← image folder 2
 ├── 3/          ← image folder 3
