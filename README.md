@@ -4,8 +4,8 @@
 ---
 
 **Full Name:** Patel Vrund Kalpeshbhai \
-**Mobile No:** +91 7984825372
-**Email:** vrund765patel@gmail.com
+**Mobile No:** +91 7984825372 \
+**Email:** vrund765patel@gmail.com \
 
 ---
 
