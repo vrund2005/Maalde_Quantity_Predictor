@@ -3,9 +3,9 @@
 
 ---
 
-**Full Name:** [YOUR FULL NAME]  
-**Mobile No:** [YOUR MOBILE NUMBER]  
-**Email:** [YOUR EMAIL]
+**Full Name:** Patel Vrund Kalpeshbhai
+**Mobile No:** [+91 7984825372]  
+**Email:** [vrund765patel@gmail.com]
 
 ---
 
