@@ -105,6 +105,7 @@ Maalde_Quantity_Predictor/
 ├── Qty_prediction.ipynb         # OCR extraction + CSV matching + Embedding extraction + model training
 ├── model_config.json       # Model metadata
 ├── requirements.txt        # Python dependencies
+├── UI - WalkThrough Video Link.md        # Screenrecording of the UI
 └── README.md               # This file
 ```
 
