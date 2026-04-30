@@ -1,11 +1,11 @@
-# 🎨 Demand Prediction Engine
+# 🎨 Design Demand Prediction Engine
 ### AI/ML Hiring Task — Maalde Company, Ahmedabad
 
 ---
 
 **Full Name:** Patel Vrund Kalpeshbhai \
 **Mobile No:** +91 7984825372 \
-**Email:** vrund765patel@gmail.com \
+**Email:** vrund765patel@gmail.com
 
 ---
 
@@ -50,14 +50,13 @@ PCA → 30 components
         ↓
 StandardScaler
         ↓
-GradientBoosting Regressor
+RandomForest Regressor
         ↓
 log prediction → expm1 → Predicted QTY
 ```
 
-**Why GradientBoosting?**
-- Best CV R² of ~0.75 across 5 folds
-- Most stable (lowest std deviation ± 0.07)
+**Why RandomForest?**
+- Best CV R² of -0.0357 across 5 folds
 - Handles small datasets better than deep models
 
 **Why log-transform the target?**
@@ -82,7 +81,6 @@ log prediction → expm1 → Predicted QTY
 - **OCR failures (~43% unmatched)** — Images with blurry labels, poor lighting, or non-standard text layouts were not matched. This data was lost
 - **No external signals** — Marketing campaigns, influencer promotions, seasonality, and festival seasons heavily drive sales but are absent from the model
 - **New design styles** — If a completely new style (e.g. a new fabric type never seen before) is uploaded, the model extrapolates from visually dissimilar training samples
-- **Price as only non-visual feature** — The real world has many more factors: color trends, competitor pricing, inventory, region, etc.
 - **Static embeddings** — MobileNetV2 was trained on ImageNet (general objects), not fashion/garments. Fine-tuning on garment data would improve embedding quality significantly
 
 ---
@@ -104,14 +102,13 @@ log prediction → expm1 → Predicted QTY
 ```
 demand-prediction-engine/
 ├── app.py                  # Streamlit UI
-├── ocr_pipeline.py         # OCR extraction + CSV matching
-├── train.py                # Embedding extraction + model training
+├── Qty_prediction.ipynb         # OCR extraction + CSV matching + Embedding extraction + model training
 ├── model_config.json       # Model metadata
 ├── requirements.txt        # Python dependencies
 └── README.md               # This file
 ```
 
-> **Note:** `embeddings.npy`, `*.pkl`, image folders, and CSV data files are excluded from the repo (see `.gitignore`) due to size and privacy.
+> **Note:** `embeddings.npy`, `*.pkl`, image folders, and CSV data files are excluded from the repo due to size and privacy.
 
 ---
 
@@ -123,7 +120,7 @@ demand-prediction-engine/
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/YOUR_USERNAME/demand-prediction-engine.git
+git clone https://github.com/vrund2005/demand-prediction-engine.git
 cd demand-prediction-engine
 ```
 
@@ -142,18 +139,12 @@ demand-prediction-engine/
 ├── 4/          ← image folder 4
 └── sales_data.csv
 ```
-
-### 4. Run OCR pipeline (generates matched_data.csv)
-```bash
-python ocr_pipeline.py
+### 4. Run the code
+```
+run each cell of .ipynb
 ```
 
-### 5. Train the model (generates all .pkl and .npy files)
-```bash
-python train.py
-```
-
-### 6. Launch the UI
+### 5. Launch the UI
 ```bash
 streamlit run app.py
 ```
@@ -166,9 +157,9 @@ Open `http://localhost:8501` in your browser.
 
 | Model | MAE | R² | CV R² (5-fold) |
 |---|---|---|---|
-| RandomForest | ~8.6 | 0.37 | 0.35 ± 0.21 |
-| XGBoost | ~5.7 | 0.67 | 0.73 ± 0.12 |
-| **GradientBoosting** ✅ | **~5.75** | **0.73** | **0.75 ± 0.07** |
+| **RandomForest** ✅| **11.56** | **0.0357** | **-0.0696 ± 0.2387** |
+| GradientBoosting | 14.24 | -0.2637 | -0.3689 ± 0.2858 |
+| XGBoost  | 15.61 | -0.6960 | -0.2518 ± 0.2321 |
 
 ---
 
